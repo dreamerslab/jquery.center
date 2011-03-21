@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery Center Plugin Demo</title>
+    <style type="text/css">
+      h1{
+        text-align : center;
+      }
+      #wrap{
+        width: 880px;
+        margin: 0 auto 50px;
+      }
+      #info{
+        text-align: center;
+        margin: 50px 0 0;
+      }
+      #play-ground1{
+        height: 150px;
+      }
+      #play-ground2{
+        height: 220px;
+        position: relative;
+      }
+      .spacer{
+        height: 50px;
+      }
+      .parent{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        background: #cccccc;
+        display: inline;
+        float: left;
+        margin: 0 20px 0 0;
+      }
+      .some-element{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background: #333333;
+        color: white;
+      }
+      .btn{
+        background: #cccccc;
+        float: left;
+        display: inline;
+        font-family: arial;
+        font-size: 12px;
+        font-weight: bolder;
+        padding: 3px 7px;
+        margin: 0 8px 0 0;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>
+        jQuery Center Plugin Demo
+      </h1>
+      <p>
+        Try clicking the buttons to see how they works :)
+      </p>
+      <h2>
+        centralize #some-element against the window
+      </h2>
+      <div id="sample1" class="spacer">
+        <div id="btn1" class="btn">Centralize</div>
+        <div class="btn restore">Restore</div>
+      </div>
+      <div id="play-ground1">
+        <div id="some-element" class="some-element">
+          #some-element
+        </div>
+      </div>
+      <h2>
+        centralize .some-element against its parent
+      </h2>
+      <div id="sample2" class="spacer">
+        <div id="btn2" class="btn">Centralize</div>
+        <div class="btn restore">Restore</div>
+      </div>
+      <div id="play-ground2">
+        <div class="parent">
+          .parent
+          <div class="some-element">
+            .some-element
+          </div>
+        </div>
+        <div class="parent">
+          .parent
+          <div class="some-element">
+            .some-element
+          </div>
+        </div>
+        <div class="parent">
+          .parent
+          <div class="some-element">
+            .some-element
+          </div>
+        </div>
+        <div class="parent">
+          .parent
+          <div class="some-element">
+            .some-element
+          </div>
+        </div>
+      </div>
+      <h3 id="info">
+        Demo provides by <a href="http://dreamerslab.com/">DreamersLab</a>
+      </h3>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.center.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      // wrap everything in document ready event
+      $( function(){
+        
+        // centerize '#some-element' against the window on clicking #btn1
+        $( '#btn1' ).bind( 'click', function(){
+          $( '#some-element' ).center();
+        });
+        
+        // restore '#some-element' position on clicking '.restore'
+        $( '#sample1' ).find( '.restore' ).bind( 'click', function(){
+          $( '#some-element' ).attr( 'style', '' );
+        });
+        
+        // centerize each '.some-element' against its parent on clicking #btn2
+        $( '#btn2' ).bind( 'click', function(){
+          $( '#play-ground2' ).find( '.some-element' ).center({ against: 'parent' });
+        });
+        
+        // restore '.some-element' position on clicking '.restore'
+        $( '#sample2' ).find( '.restore' ).bind( 'click', function(){
+          $( '.some-element' ).attr( 'style', '' );
+        });
+      });
+      
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      // google analytics
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20960410-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
