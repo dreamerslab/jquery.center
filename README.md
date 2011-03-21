@@ -41,7 +41,7 @@ This simple plugin helps you centralize your DOM element against their parent el
 
 #### topPercentage
 - description: or specify the top in percentage of the target element
-- data type: integer
+- data type: float
 - default value: 0.5
 - possible value: 0.1, 0.4, 0.8 ...
 
