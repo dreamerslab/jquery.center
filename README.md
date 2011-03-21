@@ -7,7 +7,7 @@ A jQuery plugin that centralizes DOM element.
 This simple plugin helps you centralize your DOM element against their parent element or the window. You can also specify the top of the DOM element by passing customized settings.
 
 ## Requires
-  - jQuery 1.2.3+
+  - jQuery 1.2.6+
 
 ## Browser Compatibility
   - [Firefox](http://mzl.la/RNaI) 2.0+
