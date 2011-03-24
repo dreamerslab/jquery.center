@@ -28,22 +28,22 @@ This simple plugin helps you centralize your DOM element against their parent el
 ## options
 
 #### against
-- description: the element that the DOM element centralize against to 
-- data type: string
-- default value: 'window'
-- possible value: 'window', 'parent', or '.someTarget'
+  - description: the element that the DOM element centralize against to 
+  - data type: string
+  - default value: 'window'
+  - possible value: 'window', 'parent', or '.someTarget'
 
 #### top
-- description: you can specify the top of the target element
-- data type: integer
-- default value: false
-- possible value: 13, 20, 36 ... any number you want
+  - description: you can specify the top of the target element
+  - data type: integer
+  - default value: false
+  - possible value: 13, 20, 36 ... any number you want
 
 #### topPercentage
-- description: or specify the top in percentage of the target element
-- data type: float
-- default value: 0.5
-- possible value: 0.1, 0.4, 0.8 ...
+  - description: or specify the top in percentage of the target element
+  - data type: float
+  - default value: 0.5
+  - possible value: 0.1, 0.4, 0.8 ...
 
 ## Usage
 Example code:
