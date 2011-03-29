@@ -116,27 +116,34 @@
     <script type="text/javascript" charset="utf-8">
       // wrap everything in document ready event
       $( function(){
-        
+
+        // cache jquery obj
+        var $el = $( '#some-element' ),
+            $pg2el = $( '#play-ground2' ).find( '.some-element' );
+
+        $.SyntaxHighlighter.init();
+
         // centerize '#some-element' against the window on clicking #btn1
         $( '#btn1' ).bind( 'click', function(){
-          $( '#some-element' ).center();
+          $el.center();
         });
-        
+
         // restore '#some-element' position on clicking '.restore'
         $( '#sample1' ).find( '.restore' ).bind( 'click', function(){
-          $( '#some-element' ).attr( 'style', '' );
+          $el.attr( 'style', '' );
         });
-        
+
         // centerize each '.some-element' against its parent on clicking #btn2
         $( '#btn2' ).bind( 'click', function(){
-          $( '#play-ground2' ).find( '.some-element' ).center({ against: 'parent' });
+          $pg2el.center({ against: 'parent' });
         });
-        
+
         // restore '.some-element' position on clicking '.restore'
         $( '#sample2' ).find( '.restore' ).bind( 'click', function(){
-          $( '.some-element' ).attr( 'style', '' );
+          $pg2el.attr( 'style', '' );
         });
       });
+      
       
     </script>
     <script type="text/javascript" charset="utf-8">
