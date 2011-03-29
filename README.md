@@ -1,4 +1,4 @@
-# jQuery Actual Plugin
+# jQuery Center Plugin
 
 A jQuery plugin that centralizes DOM element.
 
