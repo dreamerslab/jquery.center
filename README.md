@@ -25,7 +25,7 @@ This simple plugin helps you centralize your DOM element against their parent el
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
       <script type="text/javascript" src="path-to-file/jquery.center.js"></script>
 
-## options
+## Options
 
 #### against
   - description: the element that the DOM element centralize against to 
@@ -46,7 +46,7 @@ This simple plugin helps you centralize your DOM element against their parent el
   - possible value: 0.1, 0.4, 0.8 ...
 
 ## Usage
-Example code:
+> Example code:
       
       // centralize #some-element against the window
       $( '#some-element' ).center();
