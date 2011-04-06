@@ -65,7 +65,13 @@ This simple plugin helps you centralize your DOM element against their parent el
       });
 
 ## Demo
-Please see demo.html 
+ - Please see demo.html
+ - Online version please take a look at [this](http://dreamerslab.com/demos/centralize-html-dom-element-with-jquery-center-plugin)
+
+## Documentation
+  - There is a syntax highlight version, please see [this post](http://dreamerslab.com/blog/en/centralize-html-dom-element-with-jquery-center-plugin/)
+  - For chinese version please go [here](http://dreamerslab.com/blog/tw/centralize-html-dom-element-with-jquery-center-plugin/)
+
 
 ## License
 
