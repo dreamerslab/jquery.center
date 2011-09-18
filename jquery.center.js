@@ -1,7 +1,7 @@
 /*! Copyright 2011, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
-* Version: 1.0.1
+* Version: 1.0.2
 *
 * Requires: jQuery 1.2.6+
 */
@@ -24,11 +24,13 @@
       }, options );
     
       centerize = function(){
-        var $against, x, y;
-      
-        if( configs.against === 'window' ){
+        var against, $against, x, y;
+        
+        against = configs.against;
+        
+        if( against === 'window' ){
           $against = $w;
-        }else if( configs.against === 'parent' ){
+        }else if( against === 'parent' ){
           $against = $this.parent();
           scrollTop = 0;
         }else{
