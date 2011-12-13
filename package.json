@@ -1,0 +1,18 @@
+{
+  "name": "center",
+  "version": "1.0.3",
+  "title": "jQuery Center Plugin",
+  "author": "dreamerslab <ben@dreamerslab.com>",
+  "licenses": [{
+    "type": "MIT",
+    "url": "LICENSE.txt"
+  }],
+  "dependencies": {
+    "jquery": ">=1.2.6"
+  },
+  "description": "This simple plugin helps you centralize your DOM element against their parent element or the window. You can also specify the top of the DOM element by passing customized settings.",
+  "keywords": [ 
+    "center", "centralize", "alignment", "layout", "layouts"
+  ],
+  "homepage": "http://dreamerslab.com/blog/centralize-html-dom-element-with-jquery-center-plugin/"
+}
