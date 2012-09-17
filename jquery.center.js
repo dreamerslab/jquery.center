@@ -38,8 +38,8 @@
           scrollTop = 0;
         }
       
-        x = (( $against.width()) - ( $this.outerWidth())) * 0.5;
-        y = (( $against.height()) - ( $this.outerHeight())) * configs.topPercentage + scrollTop;
+        x = (( $against.width()) - ( $this.outerWidth(true))) * 0.5; // With jQuery-1.8.1, $this.outerWidth() return a DOM Element, not a number,i use $this.outerWidth(true) to solve this problem.
+        y = (( $against.height()) - ( $this.outerHeight(true))) * configs.topPercentage + scrollTop; // the same question to $this.outerHeight() With jQuery-1.8.1
 
         if( configs.top ) y = configs.top + scrollTop;
 
