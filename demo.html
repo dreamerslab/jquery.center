@@ -118,10 +118,8 @@
       $( function(){
 
         // cache jquery obj
-        var $el = $( '#some-element' ),
-            $pg2el = $( '#play-ground2' ).find( '.some-element' );
-
-        $.SyntaxHighlighter.init();
+        var $el    = $( '#some-element' );
+        var $pg2el = $( '#play-ground2' ).find( '.some-element' );
 
         // centerize '#some-element' against the window on clicking #btn1
         $( '#btn1' ).bind( 'click', function(){
@@ -143,8 +141,8 @@
           $pg2el.attr( 'style', '' );
         });
       });
-      
-      
+
+
     </script>
     <script type="text/javascript" charset="utf-8">
       // google analytics
