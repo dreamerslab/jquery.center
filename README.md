@@ -67,6 +67,12 @@ This simple plugin helps you centralize your DOM element against their parent el
   - default value: 0.5
   - possible value: 0.1, 0.4, 0.8 ...
 
+#### resize
+  - description: center on window resize
+  - data type: boolean
+  - default value: true
+  - possible value: true | false
+
 ## Usage
 > Example code:
 
@@ -76,13 +82,13 @@ This simple plugin helps you centralize your DOM element against their parent el
       // centralize .some-element against its parent element
       $( '.some-element' ).center({
         against : 'parent',
-        top: 10
+        top     : 10
       });
 
       // centralize .some-element against '.some-target-element'
       // !IMPORTANT '.some-target-element' must be ".some-element"'s parents
       $( '.some-element' ).center({
-        against : '.some-target-element',
+        against       : '.some-target-element',
         topPercentage : 0.4
       });
 
