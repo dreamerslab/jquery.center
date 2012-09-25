@@ -1,33 +1,29 @@
 /*! Copyright 2011, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
-* Version: 1.0.3
+* Version: 1.1.0
 *
 * Requires: jQuery 1.2.6+
 */
 ;( function( $, window ){
-  $.fn.center = function( options ){
-    var $w, scrollTop;
-    
-    $w        = $( window ); // cache gobal
-    scrollTop = $w.scrollTop();
+  $.fn.center = function( opt ){
+    var $w        = $( window ); // cache gobal
+    var scrollTop = $w.scrollTop();
 
     return this.each( function(){
-      var $this, configs, centerize;
-      
-      $this = $( this ); // cache $( this )
+      var $this = $( this ); // cache $( this )
       // merge user options with default configs
-      configs = $.extend({
-        against : 'window',
-        top : false,
-        topPercentage : 0.5
-      }, options );
-    
-      centerize = function(){
-        var against, $against, x, y;
-        
-        against = configs.against;
-        
+      var configs = $.extend({
+        against       : 'window',
+        top           : false,
+        topPercentage : 0.5,
+        resize        : true
+      }, opt );
+
+      var centerize = function(){
+        var against = configs.against;
+        var $against;
+
         if( against === 'window' ){
           $against = $w;
         }else if( against === 'parent' ){
@@ -37,9 +33,9 @@
           $against = $this.parents( against );
           scrollTop = 0;
         }
-      
-        x = (( $against.width()) - ( $this.outerWidth())) * 0.5;
-        y = (( $against.height()) - ( $this.outerHeight())) * configs.topPercentage + scrollTop;
+
+        var x = (( $against.width()) - ( $this.outerWidth())) * 0.5;
+        var y = (( $against.height()) - ( $this.outerHeight())) * configs.topPercentage + scrollTop;
 
         if( configs.top ) y = configs.top + scrollTop;
 
@@ -48,10 +44,10 @@
           'top' : y
         });
       };
-    
+
       // apply centerization
       centerize();
-      $w.resize( centerize );
+      if( configs.resize === true ) $w.resize( centerize );
     });
   };
 })( jQuery, window );
