@@ -6,7 +6,7 @@ A jQuery plugin that centralizes DOM element.
 
 ## Description
 
-This simple plugin helps you centralize your DOM element against their parent element or the window. You can also specify the top of the DOM element by passing customized settings.
+This simple plugin helps you centralize your DOM element against their parent element or the window. You can also specify the top of the DOM element by passing customized settings. This plugin only works for **absolute elements**.
 
 
 
