@@ -1,5 +1,11 @@
 # jQuery Center Plugin CHANGELOG
 
+## 1.1.1/ 2012-10-31
+
+- [bug fix] center against window failed
+
+
+
 ## 1.1.0
 
 * Add center on window resize option, default to true
