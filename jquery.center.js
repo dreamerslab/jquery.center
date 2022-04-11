@@ -18,7 +18,7 @@
   }
 
   $.fn.center = function( opt ){
-    var $w        = $( window ); // cache gobal
+    var $w        = $( window ); // cache global
     var scrollTop = $w.scrollTop();
 
     return this.each( function(){
