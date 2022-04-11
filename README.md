@@ -38,7 +38,7 @@ This simple plugin helps you centralize your DOM element against their parent el
 
 ## Installation
   - First, make sure you are using valid [DOCTYPE](http://bit.ly/hQK1Rk)
-  - Include nessesary JS files
+  - Include necessary JS files
 
 <!-- -->
 
